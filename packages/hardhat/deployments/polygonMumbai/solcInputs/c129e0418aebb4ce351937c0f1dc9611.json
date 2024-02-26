@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/DAO.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ninterface IRWATokenization {\n    function balanceOf(address _wallet) external view returns (uint);\n    function getTokenHolders() external view returns (address[] memory);\n}\n\ncontract DAO {\n\n    struct Proposal {\n        address proposer;\n        address poolContract; // Address of the pool contract involved in the proposal\n        uint dilution; // Dilution factor or any other proposal-specific parameter\n        uint yesVotes; // Total yes votes\n        uint noVotes; // Total no votes\n        bool executed; // Whether the proposal has been executed\n        bool outcome; // Outcome of the proposal, true for passed, false for not passed\n    }\n\n    Proposal[] public proposals;\n    IRWATokenization public rwaTokenizationContract; // RWA contract instance\n    mapping(uint => mapping(address => bool)) public hasVoted; // Keeps track of who has voted on which proposal\n\n    event ProposalCreated(uint indexed proposalId, address indexed proposer, address poolContract, uint dilution);\n    event Voted(uint indexed proposalId, address indexed voter, bool vote);\n    event ProposalExecuted(uint indexed proposalId, bool outcome);\n\n    constructor(address _rwaTokenizationContract) {\n        rwaTokenizationContract = IRWATokenization(_rwaTokenizationContract);\n    }\n\n    modifier onlyTokenHolder() {\n        require(rwaTokenizationContract.balanceOf(msg.sender) > 0, \"Not a token holder\");\n        _;\n    }\n\n    function createProposal(address _poolContract, uint _dilution) public onlyTokenHolder {\n        proposals.push(Proposal({\n            proposer: msg.sender,\n            poolContract: _poolContract,\n            dilution: _dilution,\n            yesVotes: 0,\n            noVotes: 0,\n            executed: false,\n            outcome: false // Initialize the outcome as false\n        }));\n\n        uint proposalId = proposals.length - 1;\n        emit ProposalCreated(proposalId, msg.sender, _poolContract, _dilution);\n    }\n\n    function vote(uint _proposalId, bool _vote) public onlyTokenHolder {\n        require(_proposalId < proposals.length, \"Proposal does not exist\");\n        require(!hasVoted[_proposalId][msg.sender], \"Already voted on this proposal\");\n\n        Proposal storage proposal = proposals[_proposalId];\n        require(!proposal.executed, \"Proposal already executed\");\n\n        if (_vote) {\n            proposal.yesVotes += rwaTokenizationContract.balanceOf(msg.sender);\n        } else {\n            proposal.noVotes += rwaTokenizationContract.balanceOf(msg.sender);\n        }\n\n        hasVoted[_proposalId][msg.sender] = true;\n        emit Voted(_proposalId, msg.sender, _vote);\n    }\n\n    function executeProposal(uint _proposalId) public {\n        Proposal storage proposal = proposals[_proposalId];\n        require(!proposal.executed, \"Proposal already executed\");\n\n        proposal.outcome = proposal.yesVotes > proposal.noVotes; // Determine the outcome\n        proposal.executed = true;\n\n        emit ProposalExecuted(_proposalId, proposal.outcome);\n    }\n\n    // Optional: Function to view the outcome of a specific proposal\n    function getProposalOutcome(uint _proposalId) public view returns (bool outcome, bool executed) {\n        require(_proposalId < proposals.length, \"Proposal does not exist\");\n        Proposal storage proposal = proposals[_proposalId];\n        return (proposal.outcome, proposal.executed);\n    }\n}"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

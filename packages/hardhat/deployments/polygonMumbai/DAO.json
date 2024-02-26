@@ -1,0 +1,433 @@
+{
+  "address": "0xc424F59bf4e89Ebd1d8737D32dE75c3403280c41",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_rwaTokenizationContract",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "proposalId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "proposer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "poolContract",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "dilution",
+          "type": "uint256"
+        }
+      ],
+      "name": "ProposalCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "proposalId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "outcome",
+          "type": "bool"
+        }
+      ],
+      "name": "ProposalExecuted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "proposalId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "voter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "vote",
+          "type": "bool"
+        }
+      ],
+      "name": "Voted",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_poolContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_dilution",
+          "type": "uint256"
+        }
+      ],
+      "name": "createProposal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_proposalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "executeProposal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_proposalId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getProposalOutcome",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "outcome",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "executed",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "hasVoted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "proposals",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "proposer",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "poolContract",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "dilution",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "yesVotes",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "noVotes",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "executed",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "outcome",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rwaTokenizationContract",
+      "outputs": [
+        {
+          "internalType": "contract IRWATokenization",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_proposalId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_vote",
+          "type": "bool"
+        }
+      ],
+      "name": "vote",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x7e0098e8cd38af7017144bdb5a575ccd2d57f0881a31c48c360ef006c48cca35",
+  "receipt": {
+    "to": null,
+    "from": "0xC75362856922CcB9063FF51fCafcA9CeA84b9ec1",
+    "contractAddress": "0xc424F59bf4e89Ebd1d8737D32dE75c3403280c41",
+    "transactionIndex": 3,
+    "gasUsed": "672030",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000800000000001000000000100000000000000000001000000000000000000000000000000000000000080000000000000000000000000000020000000000000000000000000000000000200000000000000200000000000000000000000000000000000000000000000000020000000004000000000000000000001000000000000000000000000000000100000000000004000000000000000000000000000000000000000000000000000000000100000",
+    "blockHash": "0x6cc4290fe17e9292092a8d61a4117ef063b824f529eac51fceee1b588d8739eb",
+    "transactionHash": "0x7e0098e8cd38af7017144bdb5a575ccd2d57f0881a31c48c360ef006c48cca35",
+    "logs": [
+      {
+        "transactionIndex": 3,
+        "blockNumber": 46391318,
+        "transactionHash": "0x7e0098e8cd38af7017144bdb5a575ccd2d57f0881a31c48c360ef006c48cca35",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x000000000000000000000000c75362856922ccb9063ff51fcafca9cea84b9ec1",
+          "0x0000000000000000000000004cefb7df2ff89a05ddd0176de11e01ef0cf7ed84"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000000394cfc4248200000000000000000000000000000000000000000000000000030c76c5f8f7723000000000000000000000000000000000000000000000007868706a268d3c48720000000000000000000000000000000000000000000000000308e1f634d2f0300000000000000000000000000000000000000000000000786873fef65160ca72",
+        "logIndex": 13,
+        "blockHash": "0x6cc4290fe17e9292092a8d61a4117ef063b824f529eac51fceee1b588d8739eb"
+      }
+    ],
+    "blockNumber": 46391318,
+    "cumulativeGasUsed": "1641309",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x7654D7E67E199c75C1E492D8a00C234daa04a969"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "c129e0418aebb4ce351937c0f1dc9611",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_rwaTokenizationContract\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"proposalId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"proposer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"poolContract\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"dilution\",\"type\":\"uint256\"}],\"name\":\"ProposalCreated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"proposalId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"outcome\",\"type\":\"bool\"}],\"name\":\"ProposalExecuted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"proposalId\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"vote\",\"type\":\"bool\"}],\"name\":\"Voted\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_poolContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_dilution\",\"type\":\"uint256\"}],\"name\":\"createProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_proposalId\",\"type\":\"uint256\"}],\"name\":\"executeProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_proposalId\",\"type\":\"uint256\"}],\"name\":\"getProposalOutcome\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"outcome\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"executed\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"hasVoted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"proposals\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"proposer\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"poolContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"dilution\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"yesVotes\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"noVotes\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"executed\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"outcome\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rwaTokenizationContract\",\"outputs\":[{\"internalType\":\"contract IRWATokenization\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_proposalId\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_vote\",\"type\":\"bool\"}],\"name\":\"vote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/DAO.sol\":\"DAO\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/DAO.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ninterface IRWATokenization {\\n    function balanceOf(address _wallet) external view returns (uint);\\n    function getTokenHolders() external view returns (address[] memory);\\n}\\n\\ncontract DAO {\\n\\n    struct Proposal {\\n        address proposer;\\n        address poolContract; // Address of the pool contract involved in the proposal\\n        uint dilution; // Dilution factor or any other proposal-specific parameter\\n        uint yesVotes; // Total yes votes\\n        uint noVotes; // Total no votes\\n        bool executed; // Whether the proposal has been executed\\n        bool outcome; // Outcome of the proposal, true for passed, false for not passed\\n    }\\n\\n    Proposal[] public proposals;\\n    IRWATokenization public rwaTokenizationContract; // RWA contract instance\\n    mapping(uint => mapping(address => bool)) public hasVoted; // Keeps track of who has voted on which proposal\\n\\n    event ProposalCreated(uint indexed proposalId, address indexed proposer, address poolContract, uint dilution);\\n    event Voted(uint indexed proposalId, address indexed voter, bool vote);\\n    event ProposalExecuted(uint indexed proposalId, bool outcome);\\n\\n    constructor(address _rwaTokenizationContract) {\\n        rwaTokenizationContract = IRWATokenization(_rwaTokenizationContract);\\n    }\\n\\n    modifier onlyTokenHolder() {\\n        require(rwaTokenizationContract.balanceOf(msg.sender) > 0, \\\"Not a token holder\\\");\\n        _;\\n    }\\n\\n    function createProposal(address _poolContract, uint _dilution) public onlyTokenHolder {\\n        proposals.push(Proposal({\\n            proposer: msg.sender,\\n            poolContract: _poolContract,\\n            dilution: _dilution,\\n            yesVotes: 0,\\n            noVotes: 0,\\n            executed: false,\\n            outcome: false // Initialize the outcome as false\\n        }));\\n\\n        uint proposalId = proposals.length - 1;\\n        emit ProposalCreated(proposalId, msg.sender, _poolContract, _dilution);\\n    }\\n\\n    function vote(uint _proposalId, bool _vote) public onlyTokenHolder {\\n        require(_proposalId < proposals.length, \\\"Proposal does not exist\\\");\\n        require(!hasVoted[_proposalId][msg.sender], \\\"Already voted on this proposal\\\");\\n\\n        Proposal storage proposal = proposals[_proposalId];\\n        require(!proposal.executed, \\\"Proposal already executed\\\");\\n\\n        if (_vote) {\\n            proposal.yesVotes += rwaTokenizationContract.balanceOf(msg.sender);\\n        } else {\\n            proposal.noVotes += rwaTokenizationContract.balanceOf(msg.sender);\\n        }\\n\\n        hasVoted[_proposalId][msg.sender] = true;\\n        emit Voted(_proposalId, msg.sender, _vote);\\n    }\\n\\n    function executeProposal(uint _proposalId) public {\\n        Proposal storage proposal = proposals[_proposalId];\\n        require(!proposal.executed, \\\"Proposal already executed\\\");\\n\\n        proposal.outcome = proposal.yesVotes > proposal.noVotes; // Determine the outcome\\n        proposal.executed = true;\\n\\n        emit ProposalExecuted(_proposalId, proposal.outcome);\\n    }\\n\\n    // Optional: Function to view the outcome of a specific proposal\\n    function getProposalOutcome(uint _proposalId) public view returns (bool outcome, bool executed) {\\n        require(_proposalId < proposals.length, \\\"Proposal does not exist\\\");\\n        Proposal storage proposal = proposals[_proposalId];\\n        return (proposal.outcome, proposal.executed);\\n    }\\n}\",\"keccak256\":\"0xbd9d716c282463c6a200e366b67cc1da81c6922cf2cee2a8a48127e8f76486fe\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610b52380380610b5283398101604081905261002f91610054565b600180546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b610abf806100936000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063438596321161005b578063438596321461011e5780636fdb6f7c1461015c578063c9d27afe14610186578063dfc51a251461019957600080fd5b8063013cf08b146100825780630d61b519146100de57806325fdf6b1146100f3575b600080fd5b610095610090366004610958565b6101ac565b604080516001600160a01b0398891681529790961660208801529486019390935260608501919091526080840152151560a0830152151560c082015260e0015b60405180910390f35b6100f16100ec366004610958565b61020b565b005b600154610106906001600160a01b031681565b6040516001600160a01b0390911681526020016100d5565b61014c61012c36600461098d565b600260209081526000928352604080842090915290825290205460ff1681565b60405190151581526020016100d5565b61016f61016a366004610958565b610301565b6040805192151583529015156020830152016100d5565b6100f16101943660046109b9565b61038b565b6100f16101a73660046109ee565b6106dc565b600081815481106101bc57600080fd5b60009182526020909120600690910201805460018201546002830154600384015460048501546005909501546001600160a01b0394851696509390921693909260ff8082169161010090041687565b600080828154811061021f5761021f610a18565b60009182526020909120600690910201600581015490915060ff16156102885760405162461bcd60e51b8152602060048201526019602482015278141c9bdc1bdcd85b08185b1c9958591e48195e1958dd5d1959603a1b60448201526064015b60405180910390fd5b6004810154600382015460058301805460ff196101009490931184029290921661ffff19909216919091176001179081905560405184927f948f4a9cd986f1118c3fbd459f7a22b23c0693e1ca3ef06a6a8be5aa7d39cc03926102f59291900460ff161515815260200190565b60405180910390a25050565b600080548190831061034f5760405162461bcd60e51b8152602060048201526017602482015276141c9bdc1bdcd85b08191bd95cc81b9bdd08195e1a5cdd604a1b604482015260640161027f565b600080848154811061036357610363610a18565b600091825260209091206005600690920201015460ff61010082048116969116945092505050565b6001546040516370a0823160e01b81523360048201526000916001600160a01b0316906370a0823190602401602060405180830381865afa1580156103d4573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103f89190610a2e565b1161043a5760405162461bcd60e51b81526020600482015260126024820152712737ba1030903a37b5b2b7103437b63232b960711b604482015260640161027f565b60005482106104855760405162461bcd60e51b8152602060048201526017602482015276141c9bdc1bdcd85b08191bd95cc81b9bdd08195e1a5cdd604a1b604482015260640161027f565b600082815260026020908152604080832033845290915290205460ff16156104ef5760405162461bcd60e51b815260206004820152601e60248201527f416c726561647920766f746564206f6e20746869732070726f706f73616c0000604482015260640161027f565b600080838154811061050357610503610a18565b60009182526020909120600690910201600581015490915060ff16156105675760405162461bcd60e51b8152602060048201526019602482015278141c9bdc1bdcd85b08185b1c9958591e48195e1958dd5d1959603a1b604482015260640161027f565b81156105f7576001546040516370a0823160e01b81523360048201526001600160a01b03909116906370a0823190602401602060405180830381865afa1580156105b5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105d99190610a2e565b8160030160008282546105ec9190610a5d565b9091555061067c9050565b6001546040516370a0823160e01b81523360048201526001600160a01b03909116906370a0823190602401602060405180830381865afa15801561063f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106639190610a2e565b8160040160008282546106769190610a5d565b90915550505b60008381526002602090815260408083203380855290835292819020805460ff1916600117905551841515815285917ff2913dbe661ee2acc4a046d8fbcdc792373bda34c41c6086484b5345e5785e5f91015b60405180910390a3505050565b6001546040516370a0823160e01b81523360048201526000916001600160a01b0316906370a0823190602401602060405180830381865afa158015610725573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107499190610a2e565b1161078b5760405162461bcd60e51b81526020600482015260126024820152712737ba1030903a37b5b2b7103437b63232b960711b604482015260640161027f565b6040805160e0810182523381526001600160a01b03848116602083019081529282018481526000606084018181526080850182815260a0860183815260c08701848152845460018181018755868052985160069091027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56381018054928a166001600160a01b031993841617905599517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5648b0180549190991691161790965593517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56588015590517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e566870155517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56786015590517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5689094018054925115156101000261ff00199515159590951661ffff199093169290921793909317905581546109129190610a76565b604080516001600160a01b038616815260208101859052919250339183917f6d4365eeea2290a1fb5155f6f527bb01f4a2797dea12f20abc314effacafd20291016106cf565b60006020828403121561096a57600080fd5b5035919050565b80356001600160a01b038116811461098857600080fd5b919050565b600080604083850312156109a057600080fd5b823591506109b060208401610971565b90509250929050565b600080604083850312156109cc57600080fd5b82359150602083013580151581146109e357600080fd5b809150509250929050565b60008060408385031215610a0157600080fd5b610a0a83610971565b946020939093013593505050565b634e487b7160e01b600052603260045260246000fd5b600060208284031215610a4057600080fd5b5051919050565b634e487b7160e01b600052601160045260246000fd5b80820180821115610a7057610a70610a47565b92915050565b81810381811115610a7057610a70610a4756fea26469706673582212201c6e89c8d95c5477cc296f3191c19b79c13523782b4d4c80048e10605ea6baf364736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c8063438596321161005b578063438596321461011e5780636fdb6f7c1461015c578063c9d27afe14610186578063dfc51a251461019957600080fd5b8063013cf08b146100825780630d61b519146100de57806325fdf6b1146100f3575b600080fd5b610095610090366004610958565b6101ac565b604080516001600160a01b0398891681529790961660208801529486019390935260608501919091526080840152151560a0830152151560c082015260e0015b60405180910390f35b6100f16100ec366004610958565b61020b565b005b600154610106906001600160a01b031681565b6040516001600160a01b0390911681526020016100d5565b61014c61012c36600461098d565b600260209081526000928352604080842090915290825290205460ff1681565b60405190151581526020016100d5565b61016f61016a366004610958565b610301565b6040805192151583529015156020830152016100d5565b6100f16101943660046109b9565b61038b565b6100f16101a73660046109ee565b6106dc565b600081815481106101bc57600080fd5b60009182526020909120600690910201805460018201546002830154600384015460048501546005909501546001600160a01b0394851696509390921693909260ff8082169161010090041687565b600080828154811061021f5761021f610a18565b60009182526020909120600690910201600581015490915060ff16156102885760405162461bcd60e51b8152602060048201526019602482015278141c9bdc1bdcd85b08185b1c9958591e48195e1958dd5d1959603a1b60448201526064015b60405180910390fd5b6004810154600382015460058301805460ff196101009490931184029290921661ffff19909216919091176001179081905560405184927f948f4a9cd986f1118c3fbd459f7a22b23c0693e1ca3ef06a6a8be5aa7d39cc03926102f59291900460ff161515815260200190565b60405180910390a25050565b600080548190831061034f5760405162461bcd60e51b8152602060048201526017602482015276141c9bdc1bdcd85b08191bd95cc81b9bdd08195e1a5cdd604a1b604482015260640161027f565b600080848154811061036357610363610a18565b600091825260209091206005600690920201015460ff61010082048116969116945092505050565b6001546040516370a0823160e01b81523360048201526000916001600160a01b0316906370a0823190602401602060405180830381865afa1580156103d4573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103f89190610a2e565b1161043a5760405162461bcd60e51b81526020600482015260126024820152712737ba1030903a37b5b2b7103437b63232b960711b604482015260640161027f565b60005482106104855760405162461bcd60e51b8152602060048201526017602482015276141c9bdc1bdcd85b08191bd95cc81b9bdd08195e1a5cdd604a1b604482015260640161027f565b600082815260026020908152604080832033845290915290205460ff16156104ef5760405162461bcd60e51b815260206004820152601e60248201527f416c726561647920766f746564206f6e20746869732070726f706f73616c0000604482015260640161027f565b600080838154811061050357610503610a18565b60009182526020909120600690910201600581015490915060ff16156105675760405162461bcd60e51b8152602060048201526019602482015278141c9bdc1bdcd85b08185b1c9958591e48195e1958dd5d1959603a1b604482015260640161027f565b81156105f7576001546040516370a0823160e01b81523360048201526001600160a01b03909116906370a0823190602401602060405180830381865afa1580156105b5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105d99190610a2e565b8160030160008282546105ec9190610a5d565b9091555061067c9050565b6001546040516370a0823160e01b81523360048201526001600160a01b03909116906370a0823190602401602060405180830381865afa15801561063f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106639190610a2e565b8160040160008282546106769190610a5d565b90915550505b60008381526002602090815260408083203380855290835292819020805460ff1916600117905551841515815285917ff2913dbe661ee2acc4a046d8fbcdc792373bda34c41c6086484b5345e5785e5f91015b60405180910390a3505050565b6001546040516370a0823160e01b81523360048201526000916001600160a01b0316906370a0823190602401602060405180830381865afa158015610725573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107499190610a2e565b1161078b5760405162461bcd60e51b81526020600482015260126024820152712737ba1030903a37b5b2b7103437b63232b960711b604482015260640161027f565b6040805160e0810182523381526001600160a01b03848116602083019081529282018481526000606084018181526080850182815260a0860183815260c08701848152845460018181018755868052985160069091027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56381018054928a166001600160a01b031993841617905599517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5648b0180549190991691161790965593517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56588015590517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e566870155517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56786015590517f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e5689094018054925115156101000261ff00199515159590951661ffff199093169290921793909317905581546109129190610a76565b604080516001600160a01b038616815260208101859052919250339183917f6d4365eeea2290a1fb5155f6f527bb01f4a2797dea12f20abc314effacafd20291016106cf565b60006020828403121561096a57600080fd5b5035919050565b80356001600160a01b038116811461098857600080fd5b919050565b600080604083850312156109a057600080fd5b823591506109b060208401610971565b90509250929050565b600080604083850312156109cc57600080fd5b82359150602083013580151581146109e357600080fd5b809150509250929050565b60008060408385031215610a0157600080fd5b610a0a83610971565b946020939093013593505050565b634e487b7160e01b600052603260045260246000fd5b600060208284031215610a4057600080fd5b5051919050565b634e487b7160e01b600052601160045260246000fd5b80820180821115610a7057610a70610a47565b92915050565b81810381811115610a7057610a70610a4756fea26469706673582212201c6e89c8d95c5477cc296f3191c19b79c13523782b4d4c80048e10605ea6baf364736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 34,
+        "contract": "contracts/DAO.sol:DAO",
+        "label": "proposals",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_array(t_struct(Proposal)30_storage)dyn_storage"
+      },
+      {
+        "astId": 37,
+        "contract": "contracts/DAO.sol:DAO",
+        "label": "rwaTokenizationContract",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_contract(IRWATokenization)15"
+      },
+      {
+        "astId": 43,
+        "contract": "contracts/DAO.sol:DAO",
+        "label": "hasVoted",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(Proposal)30_storage)dyn_storage": {
+        "base": "t_struct(Proposal)30_storage",
+        "encoding": "dynamic_array",
+        "label": "struct DAO.Proposal[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_contract(IRWATokenization)15": {
+        "encoding": "inplace",
+        "label": "contract IRWATokenization",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => mapping(address => bool))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_bool)"
+      },
+      "t_struct(Proposal)30_storage": {
+        "encoding": "inplace",
+        "label": "struct DAO.Proposal",
+        "members": [
+          {
+            "astId": 17,
+            "contract": "contracts/DAO.sol:DAO",
+            "label": "proposer",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 19,
+            "contract": "contracts/DAO.sol:DAO",
+            "label": "poolContract",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address"
+          },
+          {
+            "astId": 21,
+            "contract": "contracts/DAO.sol:DAO",
+            "label": "dilution",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 23,
+            "contract": "contracts/DAO.sol:DAO",
+            "label": "yesVotes",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 25,
+            "contract": "contracts/DAO.sol:DAO",
+            "label": "noVotes",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 27,
+            "contract": "contracts/DAO.sol:DAO",
+            "label": "executed",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_bool"
+          },
+          {
+            "astId": 29,
+            "contract": "contracts/DAO.sol:DAO",
+            "label": "outcome",
+            "offset": 1,
+            "slot": "5",
+            "type": "t_bool"
+          }
+        ],
+        "numberOfBytes": "192"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

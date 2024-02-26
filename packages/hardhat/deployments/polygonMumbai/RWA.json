@@ -1,0 +1,346 @@
+{
+  "address": "0x7654D7E67E199c75C1E492D8a00C234daa04a969",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_rwaCode",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_initialSupply",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "rwaCode",
+          "type": "uint256"
+        }
+      ],
+      "name": "Minted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_wallet",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "balances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTokenHolders",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rwaCode",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenHolders",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_seller",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_buyer",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xf83e7a62e1e9830fb9df7ca9b5b13a577a7878de2718e28a3d1d7f272bfe26de",
+  "receipt": {
+    "to": null,
+    "from": "0xC75362856922CcB9063FF51fCafcA9CeA84b9ec1",
+    "contractAddress": "0x7654D7E67E199c75C1E492D8a00C234daa04a969",
+    "transactionIndex": 4,
+    "gasUsed": "546248",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000004000000001000000000000040000000000000008000000000400000000000000000000000000000000000000000000000800000000000000000000100000000000000000000000000000000000000000000000000000000000080000000000000000000000000004000000000000000000000000000000000000200000000000000200000000000000080000000000000000000000000000000000020000000004000000000000000000001000000000000000000000000000000100000100000004000000000020000000000000000000000000000000000000000000000100000",
+    "blockHash": "0xf9d5691abd9b6fe738047c1b905ed394f2a3274b6df945203d5082409c4718e9",
+    "transactionHash": "0xf83e7a62e1e9830fb9df7ca9b5b13a577a7878de2718e28a3d1d7f272bfe26de",
+    "logs": [
+      {
+        "transactionIndex": 4,
+        "blockNumber": 46391183,
+        "transactionHash": "0xf83e7a62e1e9830fb9df7ca9b5b13a577a7878de2718e28a3d1d7f272bfe26de",
+        "address": "0x7654D7E67E199c75C1E492D8a00C234daa04a969",
+        "topics": [
+          "0x25b428dfde728ccfaddad7e29e4ac23c24ed7fd1a6e3e3f91894a9a073f5dfff"
+        ],
+        "data": "0x000000000000000000000000c75362856922ccb9063ff51fcafca9cea84b9ec100000000000000000000000000000000000000000000000000000000000003e80000000000000000000000000000000000000000000000000000000000000001",
+        "logIndex": 16,
+        "blockHash": "0xf9d5691abd9b6fe738047c1b905ed394f2a3274b6df945203d5082409c4718e9"
+      },
+      {
+        "transactionIndex": 4,
+        "blockNumber": 46391183,
+        "transactionHash": "0xf83e7a62e1e9830fb9df7ca9b5b13a577a7878de2718e28a3d1d7f272bfe26de",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x000000000000000000000000c75362856922ccb9063ff51fcafca9cea84b9ec1",
+          "0x00000000000000000000000004ba3ef4c023c1006019a0f9baf6e70455e41fcf"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000003a384a33fa60000000000000000000000000000000000000000000000000000346af102d6ed8e800000000000000000000000000000000000000000000003e9389e4a2b1fddf63000000000000000000000000000000000000000000000000030c76c5f97478e800000000000000000000000000000000000000000000003e93c41cece5f83f63",
+        "logIndex": 17,
+        "blockHash": "0xf9d5691abd9b6fe738047c1b905ed394f2a3274b6df945203d5082409c4718e9"
+      }
+    ],
+    "blockNumber": 46391183,
+    "cumulativeGasUsed": "1090657",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "001",
+    "1000"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "1e38b50777e4c7127870ba531328207d",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_rwaCode\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_initialSupply\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"rwaCode\",\"type\":\"uint256\"}],\"name\":\"Minted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_wallet\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTokenHolders\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rwaCode\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"tokenHolders\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_seller\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_buyer\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/RWA.sol\":\"RWA\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/RWA.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\ncontract RWA {\\n\\n    address public owner;\\n    uint public rwaCode; // Unique identifier for the RWA\\n    mapping(address => uint) public balances; // Tracks the number of tokens each address owns\\n    address[] public tokenHolders; // List of addresses that hold tokens\\n\\n    // Event declarations\\n    event Minted(address to, uint amount, uint rwaCode);\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n    event Transfer(address indexed from, address indexed to, uint amount);\\n\\n    constructor(uint _rwaCode, uint _initialSupply) {\\n        owner = msg.sender; // The deployer is the initial owner\\n        rwaCode = _rwaCode; // Set the RWA code for the token\\n        mint(owner, _initialSupply); // Mint initial supply to owner\\n    }\\n\\n    modifier onlyOwner() {\\n        require(msg.sender == owner, \\\"Caller is not the owner\\\");\\n        _;\\n    }\\n\\n    // Function to mint tokens\\n    function mint(address _to, uint _amount) internal { // Changed to internal\\n        require(_to != address(0), \\\"Invalid address\\\");\\n        balances[_to] += _amount; // Increase the balance of the recipient\\n        tokenHolders.push(_to); // Add to tokenHolders\\n        emit Minted(_to, _amount, rwaCode);\\n    }\\n\\n    // Function to transfer tokens from seller to buyer\\n    function transfer(address _seller, address _buyer, uint _amount) public {\\n        require(_seller != address(0) && _buyer != address(0), \\\"Invalid address\\\");\\n        require(balances[_seller] >= _amount, \\\"Seller does not have enough tokens\\\");\\n\\n        // Transfer the tokens\\n        balances[_seller] -= _amount;\\n        balances[_buyer] += _amount;\\n\\n        // Add buyer to tokenHolders if they are a new holder\\n        bool isTokenHolder = false;\\n        for (uint i = 0; i < tokenHolders.length; i++) {\\n            if (tokenHolders[i] == _buyer) {\\n                isTokenHolder = true;\\n                break;\\n            }\\n        }\\n        if (!isTokenHolder) {\\n            tokenHolders.push(_buyer);\\n        }\\n\\n        emit Transfer(_seller, _buyer, _amount);\\n    }\\n\\n    // Function to check token balance of a wallet\\n    function balanceOf(address _wallet) public view returns (uint) {\\n        return balances[_wallet];\\n    }\\n\\n    // Function to get all token holders\\n    function getTokenHolders() public view returns (address[] memory) {\\n        return tokenHolders;\\n    }\\n\\n    // Function to transfer contract ownership\\n    function transferOwnership(address newOwner) public onlyOwner {\\n        require(newOwner != address(0), \\\"New owner is the zero address\\\");\\n        emit OwnershipTransferred(owner, newOwner);\\n        owner = newOwner;\\n    }\\n}\\n\",\"keccak256\":\"0x34db1c9cb1ede2d13b061218ef9959bc6c5529bee8a65d35a79c28f83d74c070\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161088138038061088183398101604081905261002f91610166565b600080546001600160a01b031916339081179091556001839055610053908261005a565b50506101b1565b6001600160a01b0382166100a65760405162461bcd60e51b815260206004820152600f60248201526e496e76616c6964206164647265737360881b604482015260640160405180910390fd5b6001600160a01b038216600090815260026020526040812080548392906100ce90849061018a565b909155505060038054600180820183556000929092527fc2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b0180546001600160a01b0319166001600160a01b038516908117909155905460408051928352602083018490528201527f25b428dfde728ccfaddad7e29e4ac23c24ed7fd1a6e3e3f91894a9a073f5dfff9060600160405180910390a15050565b6000806040838503121561017957600080fd5b505080516020909101519092909150565b808201808211156101ab57634e487b7160e01b600052601160045260246000fd5b92915050565b6106c1806101c06000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c80638da5cb5b1161005b5780638da5cb5b14610107578063923108d914610132578063beabacc814610145578063f2fde38b1461015a57600080fd5b806327e235e31461008d57806370a08231146100c0578063834253e1146100e9578063876b1566146100f2575b600080fd5b6100ad61009b366004610556565b60026020526000908152604090205481565b6040519081526020015b60405180910390f35b6100ad6100ce366004610556565b6001600160a01b031660009081526002602052604090205490565b6100ad60015481565b6100fa61016d565b6040516100b79190610578565b60005461011a906001600160a01b031681565b6040516001600160a01b0390911681526020016100b7565b61011a6101403660046105c5565b6101cf565b6101586101533660046105de565b6101f9565b005b610158610168366004610556565b61042f565b606060038054806020026020016040519081016040528092919081815260200182805480156101c557602002820191906000526020600020905b81546001600160a01b031681526001909101906020018083116101a7575b5050505050905090565b600381815481106101df57600080fd5b6000918252602090912001546001600160a01b0316905081565b6001600160a01b0383161580159061021957506001600160a01b03821615155b61025c5760405162461bcd60e51b815260206004820152600f60248201526e496e76616c6964206164647265737360881b60448201526064015b60405180910390fd5b6001600160a01b0383166000908152600260205260409020548111156102cf5760405162461bcd60e51b815260206004820152602260248201527f53656c6c657220646f6573206e6f74206861766520656e6f75676820746f6b656044820152616e7360f01b6064820152608401610253565b6001600160a01b038316600090815260026020526040812080548392906102f7908490610630565b90915550506001600160a01b03821660009081526002602052604081208054839290610324908490610649565b9091555060009050805b60035481101561038a57836001600160a01b0316600382815481106103555761035561065c565b6000918252602090912001546001600160a01b031603610378576001915061038a565b8061038281610672565b91505061032e565b50806103dc57600380546001810182556000919091527fc2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b0180546001600160a01b0319166001600160a01b0385161790555b826001600160a01b0316846001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef8460405161042191815260200190565b60405180910390a350505050565b6000546001600160a01b031633146104895760405162461bcd60e51b815260206004820152601760248201527f43616c6c6572206973206e6f7420746865206f776e65720000000000000000006044820152606401610253565b6001600160a01b0381166104df5760405162461bcd60e51b815260206004820152601d60248201527f4e6577206f776e657220697320746865207a65726f20616464726573730000006044820152606401610253565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b80356001600160a01b038116811461055157600080fd5b919050565b60006020828403121561056857600080fd5b6105718261053a565b9392505050565b6020808252825182820181905260009190848201906040850190845b818110156105b95783516001600160a01b031683529284019291840191600101610594565b50909695505050505050565b6000602082840312156105d757600080fd5b5035919050565b6000806000606084860312156105f357600080fd5b6105fc8461053a565b925061060a6020850161053a565b9150604084013590509250925092565b634e487b7160e01b600052601160045260246000fd5b818103818111156106435761064361061a565b92915050565b808201808211156106435761064361061a565b634e487b7160e01b600052603260045260246000fd5b6000600182016106845761068461061a565b506001019056fea26469706673582212201618b7d595d9913812ef8a29a78aa9fa3a137bc86250ea3ff5e01f7403bb49fe64736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c80638da5cb5b1161005b5780638da5cb5b14610107578063923108d914610132578063beabacc814610145578063f2fde38b1461015a57600080fd5b806327e235e31461008d57806370a08231146100c0578063834253e1146100e9578063876b1566146100f2575b600080fd5b6100ad61009b366004610556565b60026020526000908152604090205481565b6040519081526020015b60405180910390f35b6100ad6100ce366004610556565b6001600160a01b031660009081526002602052604090205490565b6100ad60015481565b6100fa61016d565b6040516100b79190610578565b60005461011a906001600160a01b031681565b6040516001600160a01b0390911681526020016100b7565b61011a6101403660046105c5565b6101cf565b6101586101533660046105de565b6101f9565b005b610158610168366004610556565b61042f565b606060038054806020026020016040519081016040528092919081815260200182805480156101c557602002820191906000526020600020905b81546001600160a01b031681526001909101906020018083116101a7575b5050505050905090565b600381815481106101df57600080fd5b6000918252602090912001546001600160a01b0316905081565b6001600160a01b0383161580159061021957506001600160a01b03821615155b61025c5760405162461bcd60e51b815260206004820152600f60248201526e496e76616c6964206164647265737360881b60448201526064015b60405180910390fd5b6001600160a01b0383166000908152600260205260409020548111156102cf5760405162461bcd60e51b815260206004820152602260248201527f53656c6c657220646f6573206e6f74206861766520656e6f75676820746f6b656044820152616e7360f01b6064820152608401610253565b6001600160a01b038316600090815260026020526040812080548392906102f7908490610630565b90915550506001600160a01b03821660009081526002602052604081208054839290610324908490610649565b9091555060009050805b60035481101561038a57836001600160a01b0316600382815481106103555761035561065c565b6000918252602090912001546001600160a01b031603610378576001915061038a565b8061038281610672565b91505061032e565b50806103dc57600380546001810182556000919091527fc2575a0e9e593c00f959f8c92f12db2869c3395a3b0502d05e2516446f71f85b0180546001600160a01b0319166001600160a01b0385161790555b826001600160a01b0316846001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef8460405161042191815260200190565b60405180910390a350505050565b6000546001600160a01b031633146104895760405162461bcd60e51b815260206004820152601760248201527f43616c6c6572206973206e6f7420746865206f776e65720000000000000000006044820152606401610253565b6001600160a01b0381166104df5760405162461bcd60e51b815260206004820152601d60248201527f4e6577206f776e657220697320746865207a65726f20616464726573730000006044820152606401610253565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b80356001600160a01b038116811461055157600080fd5b919050565b60006020828403121561056857600080fd5b6105718261053a565b9392505050565b6020808252825182820181905260009190848201906040850190845b818110156105b95783516001600160a01b031683529284019291840191600101610594565b50909695505050505050565b6000602082840312156105d757600080fd5b5035919050565b6000806000606084860312156105f357600080fd5b6105fc8461053a565b925061060a6020850161053a565b9150604084013590509250925092565b634e487b7160e01b600052601160045260246000fd5b818103818111156106435761064361061a565b92915050565b808201808211156106435761064361061a565b634e487b7160e01b600052603260045260246000fd5b6000600182016106845761068461061a565b506001019056fea26469706673582212201618b7d595d9913812ef8a29a78aa9fa3a137bc86250ea3ff5e01f7403bb49fe64736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 295,
+        "contract": "contracts/RWA.sol:RWA",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 297,
+        "contract": "contracts/RWA.sol:RWA",
+        "label": "rwaCode",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 301,
+        "contract": "contracts/RWA.sol:RWA",
+        "label": "balances",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 304,
+        "contract": "contracts/RWA.sol:RWA",
+        "label": "tokenHolders",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_array(t_address)dyn_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
